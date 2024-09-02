@@ -1,0 +1,12 @@
+.page__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--accent-color);
+}
+
+.page__main {
+  padding: 10px;
+  background-color: var(--primary-color);
+}

@@ -1,0 +1,13 @@
+/* Светлая тема */
+:root {
+  --primary-color: white;
+  --accent-color: rgb(255, 169, 84);
+  --text-color: rgb(38, 38, 38);
+}
+
+/* Темная тема */
+:root.dark-theme {
+  --primary-color: rgb(47, 47, 47);
+  --accent-color: rgb(37, 37, 37);
+  --text-color: white;
+}
