@@ -1,11 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
 const port = 5000;
 
 /* Middleware для парсинга JSON-запросов */
 app.use(bodyParser.json());
+
+/* Middleware для разрешения CORS */
+app.use(cors());
 
 /* Эндпоинт для обработки триангуляции коробки */
 app.post("/triangulate", (req, res) => {

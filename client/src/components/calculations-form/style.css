@@ -1,0 +1,34 @@
+.calculate-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.calculate-form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calculate-form__input {
+  width: clamp(6.25rem, 3.75rem + 12.5vw, 18.75rem);
+}
+
+.calculate-form__input .MuiInputBase-root {
+  color: var(--text-color); /* Цвет текста */
+}
+
+.calculate-form__input .MuiOutlinedInput-notchedOutline {
+  border-color: #135faa; /* Цвет рамки */
+}
+
+.calculate-form__input:hover .MuiOutlinedInput-notchedOutline {
+  border-color: orange; /* Цвет рамки при наведении */
+}
+
+.calculate-form__input .MuiFormLabel-root {
+  color: var(--text-color); /* Цвет лейбла */
+}
