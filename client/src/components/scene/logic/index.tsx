@@ -23,6 +23,7 @@ export const Scene: FC = () => {
     if (!vertices) {
       dispatch(postTriangulateThunk(DEFAULT_PARAMETERS_FIGURE));
     }
+    // eslint-disable-next-line
   }, []);
 
   /* Если делается запрос на получение вершин показываем прелоадер */

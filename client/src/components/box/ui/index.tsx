@@ -2,9 +2,10 @@ import { FC, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useSelector } from "src/services/store";
 import { getTheme } from "src/services/slices/global";
+import { TVertices } from "src/types";
 
 interface BoxProps {
-  vertices: number[][];
+  vertices: TVertices;
 }
 
 export const Box: FC<BoxProps> = ({ vertices }) => {
@@ -13,10 +14,10 @@ export const Box: FC<BoxProps> = ({ vertices }) => {
   const [geometry, setGeometry] = useState<THREE.BufferGeometry | null>(null);
 
   useEffect(() => {
-    // Преобразуем плоский массив вершин для BufferGeometry
+    /* Преобразуем плоский массив вершин для BufferGeometry */
     const flatVertices = vertices.flat();
 
-    // Создаем BufferGeometry вручную
+    /* Создаем BufferGeometry */
     const geometry = new THREE.BufferGeometry();
     const verticesArray = new Float32Array(flatVertices);
 
@@ -27,7 +28,8 @@ export const Box: FC<BoxProps> = ({ vertices }) => {
 
     geometry.computeVertexNormals();
     setGeometry(geometry);
-  }, [vertices]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     geometry && (

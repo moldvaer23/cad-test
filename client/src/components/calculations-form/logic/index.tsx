@@ -19,6 +19,7 @@ export const CalculationsForm: FC = () => {
   }>({});
 
   const verticesReq = useSelector(getVerticesReq);
+  const isFormValid = Object.values(errors).every((error) => !error);
   const dispatch = useDispatch();
 
   const validate = (value: number): string | undefined => {
@@ -69,10 +70,6 @@ export const CalculationsForm: FC = () => {
       dispatch(postTriangulateThunk(formState));
     }
   };
-
-  /* Если в форме есть запись то устанавливаем true что бы */
-  /* отключить кнопку подтверждения формы */
-  const isFormValid = Object.values(errors).every((error) => !error);
 
   return (
     <CalculationsFormUI

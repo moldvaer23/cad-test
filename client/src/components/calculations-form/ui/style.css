@@ -25,10 +25,6 @@
   border-color: #135faa; /* Цвет рамки */
 }
 
-.calculate-form__input:hover .MuiOutlinedInput-notchedOutline {
-  border-color: orange; /* Цвет рамки при наведении */
-}
-
 .calculate-form__input .MuiFormLabel-root {
   color: var(--text-color); /* Цвет лейбла */
 }
