@@ -15,7 +15,7 @@ type TInitialState = {
 
 const initialState: TInitialState = {
   theme: (localStorage.getItem("theme") as TTheme) || "light",
-  vertices: [],
+  vertices: null,
   verticesReq: false,
   verticesReqError: null,
 };
@@ -51,7 +51,7 @@ const globalSlice = createSlice({
       })
       .addCase(postTriangulateThunk.fulfilled, (state, action) => {
         state.verticesReq = false;
-        state.vertices = action.payload;
+        state.vertices = action.payload.vertices;
       });
   },
 });

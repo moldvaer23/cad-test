@@ -23,15 +23,15 @@ app.post("/triangulate", (req, res) => {
   const vertices = [
     /* Нижняя грань */
     { x: 0, y: 0, z: 0 },
-    { x: length, y: 0, z: 0 },
-    { x: length, y: width, z: 0 },
-    { x: 0, y: width, z: 0 },
+    { x: 0, y: 0, z: length },
+    { x: width, y: 0, z: length },
+    { x: width, y: 0, z: 0 },
 
     /* Верхняя грань */
-    { x: 0, y: 0, z: height },
-    { x: length, y: 0, z: height },
-    { x: length, y: width, z: height },
-    { x: 0, y: width, z: height },
+    { x: 0, y: height, z: 0 },
+    { x: 0, y: height, z: length },
+    { x: width, y: height, z: length },
+    { x: width, y: height, z: 0 },
   ];
 
   /* Треугольники, представляющие каждую грань параллелепипеда */

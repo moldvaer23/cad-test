@@ -6,5 +6,4 @@ export type TParametersFigure = {
   width: number;
 };
 
-export type TVertex = number[];
-export type TVertices = TVertex[];
+export type TVertices = number[][];
