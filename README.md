@@ -3,6 +3,7 @@
 ## Установка
 
 - `git clone https://github.com/moldvaer23/cad-test.git`
+- Перейти в папку с проектом
 - `cd client/`
 - `npm install`
 - `cd ../`
